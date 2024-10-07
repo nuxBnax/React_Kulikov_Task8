@@ -2,7 +2,7 @@ import { useDispatch} from "react-redux";
 import { addProduct } from "../../../redux/slices/productSlice";
 
 
-const ProductCards = ({id, cardLink, img, addLink, title, price, btnText}) => {
+const ProductCards = ({id, cardLink, img, addLink, title, price, btnText, sizes}) => {
 
     const dispatch = useDispatch();
 
@@ -17,7 +17,10 @@ const ProductCards = ({id, cardLink, img, addLink, title, price, btnText}) => {
                 <img className="cards__img" src={img} alt="product"/>
                 <div className="cards__text">
                 <p className="cards__text-discription">{title}</p>
-                <p className="cards__text-price">$ {price}</p>
+                <div className="cards__block-text">
+                        <p className="cards__text-price">$ {price}</p>
+                        <p className="cards__text-sizes">{sizes}</p>
+                    </div>
                 </div>
             </a>
             <div className="add-box">

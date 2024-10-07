@@ -19,7 +19,8 @@ const ContentMiddle = () => {
                     addLink={product.addLink}
                     title={product.title}
                     price={product.price}
-                    btnText={product.btnText} />
+                    btnText={product.btnText}
+                    sizes={product.sizes.join(', ')} />
                 )}
 
             </section>
